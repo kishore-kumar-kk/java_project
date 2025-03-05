@@ -2,7 +2,7 @@ pipeline {
     agent { label 'kishore' }
     environment {
         AWS_REGION = 'us-east-1'
-        ECR_REPO = '108782100023.dkr.ecr.us-east-1.amazonaws.com/jenkins-build'  // Fixed missing quote
+        ECR_REPO = '120569634883.dkr.ecr.us-east-1.amazonaws.com/jenkins-build'
     }
     stages {
         stage('Clone Repository') {
