@@ -6,14 +6,6 @@ pipeline {
 	IMAGE_NAME = 'java-app-image'
     }
     stages {
-	pipeline {
-	agent any
-	environment {
-	AWS_REGION = 'us-east-1'
-	ECR_REPO = '120569634883.dkr.ecr.us-east-1.amazonaws.com/java'
-	IMAGE_NAME = 'java1-app-image'
-}
-    stages {
         stage('Clone Repository') {
             steps {
                 git branch: 'main', url: 'https://github.com/kishore-kumar-kk/java_project.git'
@@ -41,6 +33,4 @@ pipeline {
             }
         }
     }
-}
-}
 }
